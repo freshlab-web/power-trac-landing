@@ -65,7 +65,6 @@ All colors MUST be HSL.
     --font-body: 1rem;
   }
 
-@layer base {
   * {
     @apply border-border;
   }
