@@ -28,6 +28,15 @@ const Footer = () => {
       <div className="h-1 bg-power-yellow"></div>
       
       <div className="container mx-auto px-4 pt-16">
+        {/* Logo */}
+        <div className="flex justify-center mb-12">
+          <img
+            src="/lovable-uploads/32f85995-6e29-48d3-b7e2-c3353ab52ec0.png"
+            alt="Power Trac Logo"
+            className="h-16 w-auto"
+          />
+        </div>
+        
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {offices.map((office, index) => (
             <div key={index} className="space-y-6">

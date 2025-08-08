@@ -6,6 +6,15 @@ import heroImage from "@/assets/hero-forklift.jpg";
 const Hero = () => {
   return (
     <section className="relative min-h-screen bg-power-black overflow-hidden">
+      {/* Logo */}
+      <div className="absolute top-8 left-8 z-20">
+        <img
+          src="/lovable-uploads/32f85995-6e29-48d3-b7e2-c3353ab52ec0.png"
+          alt="Power Trac Logo"
+          className="h-12 w-auto"
+        />
+      </div>
+
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img 
