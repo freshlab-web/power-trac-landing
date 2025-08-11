@@ -7,7 +7,7 @@ const Territory = () => {
           <div className="space-y-6">
             <h2 className="font-section text-power-black">
               Filiais e atuação em<br />
-              <span className="text-power-yellow">TERRITÓRIO NACIONAL</span>
+              <span className="text-power-yellow bg-power-black px-4 py-2 rounded">TERRITÓRIO NACIONAL</span>
             </h2>
             
             <p className="text-lg text-power-black leading-relaxed">

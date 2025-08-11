@@ -32,7 +32,7 @@ const Hero = () => {
           <div className="text-power-white space-y-8">
             <h1 className="font-hero text-power-white leading-tight">
               Venda e manutenção de{" "}
-              <span className="text-power-yellow">baterias tracionárias</span>{" "}
+              <span className="text-power-yellow bg-power-black px-3 py-1 rounded">baterias tracionárias</span>{" "}
               para empilhadeira elétrica
             </h1>
             
