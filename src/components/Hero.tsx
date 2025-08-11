@@ -11,7 +11,7 @@ const Hero = () => {
         <img
           src="/lovable-uploads/32f85995-6e29-48d3-b7e2-c3353ab52ec0.png"
           alt="Power Trac Logo"
-          className="h-12 w-auto"
+          className="h-20 w-auto"
         />
       </div>
 
