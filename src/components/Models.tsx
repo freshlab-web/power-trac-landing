@@ -1,29 +1,23 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import batteryImage from "@/assets/battery-model-1.jpg";
 
 const Models = () => {
   const models = [
     {
       name: "Bateria Tracionária 24V",
-      image: batteryImage,
+      image: "/lovable-uploads/18014bfb-7e0e-427d-a30d-a12022025782.png",
       specs: "Alta performance para operações intensivas"
     },
     {
       name: "Bateria Lítio 48V",
-      image: batteryImage,
+      image: "/lovable-uploads/52a9578c-b7bd-487d-938b-c6d31349940f.png",
       specs: "Tecnologia avançada em lítio"
     },
     {
       name: "Bateria Chumbo-Ácido 36V",
-      image: batteryImage,
+      image: "/lovable-uploads/37627045-808d-4d23-b02b-bdf47b96f9cd.png",
       specs: "Durabilidade comprovada"
-    },
-    {
-      name: "Bateria Inteligente 80V",
-      image: batteryImage,
-      specs: "Sistema de monitoramento integrado"
     }
   ];
 
