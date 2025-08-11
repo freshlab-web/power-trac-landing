@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail, Instagram, Facebook, Linkedin } from "lucide-react";
 
 const Footer = () => {
   const offices = [
@@ -64,6 +64,36 @@ const Footer = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Social Media Section */}
+        <div className="flex justify-center mb-8">
+          <div className="flex gap-6">
+            <a 
+              href="https://www.instagram.com/powertracbaterias/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-power-white/10 p-3 rounded-full hover:bg-power-yellow hover:text-power-black transition-all duration-300 group"
+            >
+              <Instagram className="w-6 h-6 text-power-yellow group-hover:text-power-black" />
+            </a>
+            <a 
+              href="https://www.facebook.com/powertracbaterias/?locale=pt_BR"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-power-white/10 p-3 rounded-full hover:bg-power-yellow hover:text-power-black transition-all duration-300 group"
+            >
+              <Facebook className="w-6 h-6 text-power-yellow group-hover:text-power-black" />
+            </a>
+            <a 
+              href="https://br.linkedin.com/company/power-trac-baterias"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-power-white/10 p-3 rounded-full hover:bg-power-yellow hover:text-power-black transition-all duration-300 group"
+            >
+              <Linkedin className="w-6 h-6 text-power-yellow group-hover:text-power-black" />
+            </a>
+          </div>
         </div>
 
         {/* Bottom section */}
