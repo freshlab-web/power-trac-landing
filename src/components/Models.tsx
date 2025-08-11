@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const Models = () => {
   const models = [
@@ -30,45 +29,33 @@ const Models = () => {
           </h2>
         </div>
 
-        {/* Carousel Container */}
-        <div className="relative">
-          <div className="flex gap-6 overflow-x-auto scrollbar-hide pb-4">
-            {models.map((model, index) => (
-              <Card key={index} className="flex-none w-80 group hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
-                <CardContent className="p-0">
-                  <div className="relative overflow-hidden rounded-t-lg">
-                    <img 
-                      src={model.image} 
-                      alt={model.name}
-                      className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-power-black/30 to-transparent"></div>
-                  </div>
+        {/* Grid Container */}
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {models.map((model, index) => (
+            <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
+              <CardContent className="p-0">
+                <div className="relative overflow-hidden rounded-t-lg">
+                  <img 
+                    src={model.image} 
+                    alt={model.name}
+                    className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-power-black/30 to-transparent"></div>
+                </div>
+                
+                <div className="p-6">
+                  <h3 className="font-card text-power-black mb-3">{model.name}</h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    {model.specs}
+                  </p>
                   
-                  <div className="p-6">
-                    <h3 className="font-card text-power-black mb-3">{model.name}</h3>
-                    <p className="text-muted-foreground mb-6 leading-relaxed">
-                      {model.specs}
-                    </p>
-                    
-                    <Button variant="power-primary" className="w-full">
-                      Solicitar orçamento
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          {/* Navigation Arrows */}
-          <div className="flex justify-center gap-4 mt-8">
-            <Button variant="outline" size="icon" className="rounded-full">
-              <ChevronLeft className="w-5 h-5" />
-            </Button>
-            <Button variant="outline" size="icon" className="rounded-full">
-              <ChevronRight className="w-5 h-5" />
-            </Button>
-          </div>
+                  <Button variant="power-primary" className="w-full">
+                    Solicitar orçamento
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>
