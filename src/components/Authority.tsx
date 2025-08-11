@@ -22,10 +22,10 @@ const Authority = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-2xl text-power-black leading-relaxed font-medium mb-12">
-            Mais de <span className="text-power-yellow bg-power-black px-3 py-1 rounded font-bold">20 anos de mercado</span>, 
-            <span className="text-power-yellow bg-power-black px-3 py-1 rounded font-bold"> 3 fábricas no Brasil</span> e uma 
+            Mais de <span className="text-power-yellow bg-power-black px-2 py-0.5 rounded font-bold">20 anos de mercado</span>, 
+            <span className="text-power-yellow bg-power-black px-2 py-0.5 rounded font-bold"> 3 fábricas no Brasil</span> e uma 
             linha completa de baterias tracionárias de 24 V ou mais, com 
-            <span className="text-power-yellow bg-power-black px-3 py-1 rounded font-bold"> tecnologia inteligente</span> em 
+            <span className="text-power-yellow bg-power-black px-2 py-0.5 rounded font-bold"> tecnologia inteligente</span> em 
             chumbo-ácido e lítio.
           </p>
           
