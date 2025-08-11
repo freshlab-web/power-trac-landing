@@ -1,5 +1,3 @@
-import { Card } from "@/components/ui/card";
-
 const Territory = () => {
   return (
     <section className="py-20 bg-power-gray">
@@ -19,13 +17,11 @@ const Territory = () => {
 
           {/* Map */}
           <div className="flex justify-center">
-            <Card className="p-6 bg-white shadow-2xl border-0">
-              <img 
-                src="/lovable-uploads/42e3e567-e3bc-4f10-8dca-50d37cba5f89.png"
-                alt="Mapa do Brasil mostrando a distribuição das filiais Power Trac"
-                className="w-full max-w-md h-auto"
-              />
-            </Card>
+            <img 
+              src="/lovable-uploads/b2e97168-a7cb-4c66-afcf-4de7f17321fb.png"
+              alt="Mapa do Brasil mostrando a distribuição das filiais Power Trac"
+              className="w-full max-w-md h-auto transition-transform duration-300 hover:scale-110"
+            />
           </div>
         </div>
       </div>
