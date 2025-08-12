@@ -57,9 +57,11 @@ const Segments = () => {
         </div>
 
         <div className="text-center">
+            <a href="https://wa.me/554199890345?text=Olá! Gostaria de falar sobre manutenção ou venda de baterias tracionárias." target="_blank">
           <Button variant="power-primary" size="lg" className="shadow-xl">
             Receba seu orçamento
           </Button>
+          </a>
         </div>
       </div>
     </section>
