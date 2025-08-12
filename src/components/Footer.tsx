@@ -31,7 +31,7 @@ const Footer = () => {
         {/* Logo */}
         <div className="flex justify-center mb-12">
           <img
-            src="/lovable-uploads/32f85995-6e29-48d3-b7e2-c3353ab52ec0.png"
+            src="https://cdn.jsdelivr.net/gh/freshlab-web/power-trac-landing@main/dist/lovable-uploads/32f85995-6e29-48d3-b7e2-c3353ab52ec0.png"
             alt="Power Trac Logo"
             className="h-16 w-auto"
           />

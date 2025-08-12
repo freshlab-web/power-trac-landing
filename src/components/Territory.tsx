@@ -18,7 +18,7 @@ const Territory = () => {
           {/* Map */}
           <div className="flex justify-center">
             <img 
-              src="/lovable-uploads/b2e97168-a7cb-4c66-afcf-4de7f17321fb.png"
+              src="https://cdn.jsdelivr.net/gh/freshlab-web/power-trac-landing@main/dist/lovable-uploads/b2e97168-a7cb-4c66-afcf-4de7f17321fb.png"
               alt="Mapa do Brasil mostrando a distribuição das filiais Power Trac"
               className="w-full max-w-md h-auto transition-transform duration-300 hover:scale-110"
             />
