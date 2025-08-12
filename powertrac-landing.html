@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Trac - Baterias Tracionárias para Empilhadeiras Elétricas</title>
+    <meta name="description" content="Venda e manutenção de baterias tracionárias para empilhadeiras elétricas. Mais de 20 anos de mercado, tecnologia em lítio e chumbo-ácido. Solicite seu orçamento!" />
+    <meta name="author" content="Power Trac" />
+    <meta name="keywords" content="baterias tracionárias, empilhadeiras elétricas, baterias lítio, baterias chumbo-ácido, manutenção baterias" />
+
+    <meta property="og:title" content="Power Trac - Baterias Tracionárias para Empilhadeiras Elétricas" />
+    <meta property="og:description" content="Venda e manutenção de baterias tracionárias para empilhadeiras elétricas. Mais de 20 anos de mercado, tecnologia em lítio e chumbo-ácido." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/src/assets/hero-forklift.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@powertrac" />
+    <meta name="twitter:image" content="/src/assets/hero-forklift.jpg" />
+
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Power Trac Design System */
+        :root {
+            --power-black: hsl(0, 0%, 0%);
+            --power-yellow: hsl(51, 100%, 50%);
+            --power-white: hsl(0, 0%, 100%);
+            --power-gray: hsl(0, 0%, 96%);
+            --muted-foreground: hsl(0, 0%, 40%);
+            
+            --font-hero: 3.5rem;
+            --font-section: 2.5rem;
+            --font-card: 1.5rem;
+            --transition-power: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--power-black);
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .bg-power-black { background-color: var(--power-black); }
+        .bg-power-yellow { background-color: var(--power-yellow); }
+        .bg-power-gray { background-color: var(--power-gray); }
+        .bg-power-white { background-color: var(--power-white); }
+        
+        .text-power-black { color: var(--power-black); }
+        .text-power-yellow { color: var(--power-yellow); }
+        .text-power-white { color: var(--power-white); }
+        .text-muted { color: var(--muted-foreground); }
+
+        /* Typography */
+        .font-hero {
+            font-size: var(--font-hero);
+            font-weight: 800;
+            line-height: 1.1;
+        }
+
+        .font-section {
+            font-size: var(--font-section);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .font-card {
+            font-size: var(--font-card);
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition-power);
+        }
+
+        .btn-primary {
+            background-color: var(--power-yellow);
+            color: var(--power-black);
+        }
+
+        .btn-primary:hover {
+            background-color: hsl(51, 100%, 45%);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--power-white);
+            border: 2px solid var(--power-white);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--power-white);
+            color: var(--power-black);
+        }
+
+        .btn-lg {
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+        }
+
+        /* Grid Layouts */
+        .grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .grid-cols-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .grid-cols-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: var(--power-white);
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: var(--transition-power);
+        }
+
+        .card:hover {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            transform: translateY(-4px);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        /* Form Styles */
+        .form-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            transition: var(--transition-power);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--power-yellow);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            background-color: var(--power-black);
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('src/assets/hero-forklift.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.6;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, 
+                hsla(0, 0%, 0%, 0.9), 
+                hsla(0, 0%, 0%, 0.7), 
+                hsla(0, 0%, 0%, 0.5));
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            min-height: 100vh;
+            padding: 5rem 0;
+        }
+
+        .hero-logo {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            z-index: 20;
+            height: 5rem;
+        }
+
+        .highlight {
+            background-color: var(--power-black);
+            color: var(--power-yellow);
+            padding: 0.125rem 0.5rem;
+            border-radius: 0.25rem;
+        }
+
+        /* Section Spacing */
+        .section {
+            padding: 5rem 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            :root {
+                --font-hero: 2.5rem;
+                --font-section: 2rem;
+                --font-card: 1.25rem;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 2rem 0;
+            }
+
+            .grid-cols-2,
+            .grid-cols-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+        }
+
+        /* SVG Icons */
+        .icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+        }
+
+        .icon-lg {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        /* Animations */
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+
+        .hover-scale-icon:hover .icon {
+            transform: scale(1.1);
+        }
+
+        /* Authority Section Carousel */
+        .carousel {
+            display: flex;
+            gap: 1rem;
+            overflow-x: auto;
+            padding: 1rem 0;
+            scroll-behavior: smooth;
+        }
+
+        .carousel-item {
+            flex: 0 0 auto;
+            width: 200px;
+            height: 80px;
+            background: white;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-item img {
+            max-height: 48px;
+            max-width: 100%;
+            object-fit: contain;
+            filter: grayscale(100%);
+            transition: var(--transition-power);
+        }
+
+        .carousel-item:hover img {
+            filter: grayscale(0%);
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: var(--power-black);
+            color: var(--power-white);
+            position: relative;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background-color: var(--power-yellow);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem;
+            height: 3rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--power-yellow);
+            text-decoration: none;
+            transition: var(--transition-power);
+        }
+
+        .social-link:hover {
+            background-color: var(--power-yellow);
+            color: var(--power-black);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Logo -->
+        <img src="public/lovable-uploads/32f85995-6e29-48d3-b7e2-c3353ab52ec0.png" alt="Power Trac Logo" class="hero-logo">
+        
+        <!-- Background Image with Overlay -->
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        
+        <!-- Content -->
+        <div class="container">
+            <div class="hero-content">
+                <!-- Left Content -->
+                <div class="text-power-white">
+                    <h1 class="font-hero text-power-white">
+                        Venda e manutenção de 
+                        <span class="highlight">baterias tracionárias</span> 
+                        para empilhadeira elétrica
+                    </h1>
+                    
+                    <p style="font-size: 1.25rem; margin: 2rem 0; line-height: 1.6;">
+                        Leve a marca da força para sua operação
+                    </p>
+
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="#" class="btn btn-primary btn-lg hover-scale-icon">
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                            Atendimento via WhatsApp
+                        </a>
+                        
+                        <a href="#modelos" class="btn btn-outline btn-lg">
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                            Veja os modelos disponíveis
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Form -->
+                <div style="margin-left: auto;">
+                    <div style="background: var(--power-white); padding: 2rem; border-radius: 0.75rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); max-width: 400px;">
+                        <h3 class="font-card text-power-black" style="text-align: center; margin-bottom: 1.5rem;">
+                            Receba nosso contato
+                        </h3>
+                        
+                        <form>
+                            <input type="text" placeholder="Nome completo" class="form-input">
+                            <input type="tel" placeholder="Telefone" class="form-input">
+                            <input type="email" placeholder="E-mail" class="form-input">
+                            <input type="text" placeholder="CNPJ (opcional)" class="form-input">
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                Receber contato
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Segments Section -->
+    <section class="section bg-power-white">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <h2 class="font-section text-power-black">
+                    A marca da força está presente nos mais diversos cenários
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-3" style="margin-bottom: 3rem;">
+                <div class="card hover-scale">
+                    <div style="position: relative; overflow: hidden; border-radius: 0.75rem 0.75rem 0 0;">
+                        <img src="src/assets/industry-icon.jpg" alt="Indústrias" style="width: 100%; height: 12rem; object-fit: cover;">
+                        <div style="position: absolute; inset: 0; background: rgba(0, 0, 0, 0.2);"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="font-card text-power-black" style="margin-bottom: 0.75rem;">Indústrias</h3>
+                        <p class="text-muted">Soluções robustas para ambientes industriais de alta demanda</p>
+                    </div>
+                </div>
+
+                <div class="card hover-scale">
+                    <div style="position: relative; overflow: hidden; border-radius: 0.75rem 0.75rem 0 0;">
+                        <img src="src/assets/distribution-icon.jpg" alt="Centros de Distribuição" style="width: 100%; height: 12rem; object-fit: cover;">
+                        <div style="position: absolute; inset: 0; background: rgba(0, 0, 0, 0.2);"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="font-card text-power-black" style="margin-bottom: 0.75rem;">Centros de Distribuição</h3>
+                        <p class="text-muted">Eficiência operacional para logística e armazenagem</p>
+                    </div>
+                </div>
+
+                <div class="card hover-scale">
+                    <div style="position: relative; overflow: hidden; border-radius: 0.75rem 0.75rem 0 0;">
+                        <img src="src/assets/cargo-icon.jpg" alt="Movimentação de cargas" style="width: 100%; height: 12rem; object-fit: cover;">
+                        <div style="position: absolute; inset: 0; background: rgba(0, 0, 0, 0.2);"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="font-card text-power-black" style="margin-bottom: 0.75rem;">Movimentação de cargas</h3>
+                        <p class="text-muted">Força e durabilidade para operações pesadas</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="#" class="btn btn-primary btn-lg">
+                    Receba seu orçamento
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Authority Section -->
+    <section class="section bg-power-gray">
+        <div class="container">
+            <div style="max-width: 64rem; margin: 0 auto; text-align: center;">
+                <p style="font-size: 1.5rem; line-height: 1.6; font-weight: 500; margin-bottom: 3rem;">
+                    Mais de <span class="highlight">20 anos de mercado</span>, 
+                    <span class="highlight"> 3 fábricas no Brasil</span> e uma 
+                    linha completa de baterias tracionárias de 24 V ou mais, com 
+                    <span class="highlight"> tecnologia inteligente</span> em 
+                    chumbo-ácido e lítio.
+                </p>
+                
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <img src="public/lovable-uploads/a847ccaa-4924-4dbc-9ec4-89b55b8c45cf.png" alt="Logo JMalucelli">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="public/lovable-uploads/48c48a5d-100e-457c-904f-ae572aa3ed76.png" alt="Logo BrasilSat">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="public/lovable-uploads/f4113aab-ab20-4918-bcea-8c85b49a785b.png" alt="Logo Coteminas">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="public/lovable-uploads/c19308e3-1a8d-4b62-824f-c4250d859b02.png" alt="Logo CSI">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="public/lovable-uploads/6bc4ff7b-0312-4550-807e-1a99ec58f1ae.png" alt="Logo Faurecia">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="public/lovable-uploads/ba2905ae-cc70-4171-b5d7-268e609e48c2.png" alt="Logo Foxlux">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Territory Section -->
+    <section class="section bg-power-gray">
+        <div class="container">
+            <div class="grid grid-cols-2" style="align-items: center;">
+                <!-- Content -->
+                <div>
+                    <h2 class="font-section text-power-black" style="margin-bottom: 1.5rem;">
+                        Filiais e atuação em<br>
+                        <span class="highlight">TERRITÓRIO NACIONAL</span>
+                    </h2>
+                    
+                    <p style="font-size: 1.125rem; line-height: 1.6;">
+                        O grupo Power Trac baterias conta com 03 fábricas espalhadas em pontos estratégicos do Brasil e uma Holding. Além de inúmeros clientes contamos com a força e participação de mais de 30 distribuidores/representantes em todo território nacional.
+                    </p>
+                </div>
+
+                <!-- Map -->
+                <div style="display: flex; justify-content: center;">
+                    <img src="public/lovable-uploads/b2e97168-a7cb-4c66-afcf-4de7f17321fb.png" 
+                         alt="Mapa do Brasil mostrando a distribuição das filiais Power Trac"
+                         class="hover-scale"
+                         style="width: 100%; max-width: 400px; height: auto;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Models Section -->
+    <section id="modelos" class="section bg-power-white">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <h2 class="font-section text-power-black">
+                    Modelos Mais Procurados
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-3" style="max-width: 72rem; margin: 0 auto;">
+                <div class="card hover-scale">
+                    <div style="position: relative; overflow: hidden; border-radius: 0.75rem 0.75rem 0 0;">
+                        <img src="public/lovable-uploads/18014bfb-7e0e-427d-a30d-a12022025782.png" 
+                             alt="Bateria 24V 354AH"
+                             style="width: 100%; height: 14rem; object-fit: cover;">
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent);"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="font-card text-power-black" style="margin-bottom: 0.75rem;">Bateria 24V 354AH</h3>
+                        <p class="text-muted" style="margin-bottom: 1.5rem;">Alta performance para operações intensivas</p>
+                        <a href="#" class="btn btn-primary" style="width: 100%;">Solicitar orçamento</a>
+                    </div>
+                </div>
+
+                <div class="card hover-scale">
+                    <div style="position: relative; overflow: hidden; border-radius: 0.75rem 0.75rem 0 0;">
+                        <img src="public/lovable-uploads/52a9578c-b7bd-487d-938b-c6d31349940f.png" 
+                             alt="Bateria 36V 258AH"
+                             style="width: 100%; height: 14rem; object-fit: cover;">
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent);"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="font-card text-power-black" style="margin-bottom: 0.75rem;">Bateria 36V 258AH</h3>
+                        <p class="text-muted" style="margin-bottom: 1.5rem;">Tecnologia avançada em lítio</p>
+                        <a href="#" class="btn btn-primary" style="width: 100%;">Solicitar orçamento</a>
+                    </div>
+                </div>
+
+                <div class="card hover-scale">
+                    <div style="position: relative; overflow: hidden; border-radius: 0.75rem 0.75rem 0 0;">
+                        <img src="public/lovable-uploads/37627045-808d-4d23-b02b-bdf47b96f9cd.png" 
+                             alt="Bateria 48V 608Ah"
+                             style="width: 100%; height: 14rem; object-fit: cover;">
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent);"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="font-card text-power-black" style="margin-bottom: 0.75rem;">Bateria 48V 608Ah</h3>
+                        <p class="text-muted" style="margin-bottom: 1.5rem;">Durabilidade comprovada</p>
+                        <a href="#" class="btn btn-primary" style="width: 100%;">Solicitar orçamento</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section bg-power-white">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <h2 class="font-section text-power-black">
+                    Reduza custos, amplie a autonomia e mantenha sua operação sempre ativa
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-3" style="margin-bottom: 4rem;">
+                <div style="text-align: center;">
+                    <div style="margin-bottom: 1.5rem; display: inline-flex; align-items: center; justify-content: center; width: 4rem; height: 4rem; background-color: var(--power-yellow); border-radius: 50%;">
+                        <svg class="icon icon-lg" viewBox="0 0 24 24">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-card text-power-black" style="margin-bottom: 1rem;">Economia no custo operacional</h3>
+                    <p class="text-muted">Redução significativa nos gastos com energia e manutenção</p>
+                </div>
+
+                <div style="text-align: center;">
+                    <div style="margin-bottom: 1.5rem; display: inline-flex; align-items: center; justify-content: center; width: 4rem; height: 4rem; background-color: var(--power-yellow); border-radius: 50%;">
+                        <svg class="icon icon-lg" viewBox="0 0 24 24">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-card text-power-black" style="margin-bottom: 1rem;">Alta durabilidade e desempenho</h3>
+                    <p class="text-muted">Construção robusta para suportar operações intensivas</p>
+                </div>
+
+                <div style="text-align: center;">
+                    <div style="margin-bottom: 1.5rem; display: inline-flex; align-items: center; justify-content: center; width: 4rem; height: 4rem; background-color: var(--power-yellow); border-radius: 50%;">
+                        <svg class="icon icon-lg" viewBox="0 0 24 24">
+                            <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"></polygon>
+                        </svg>
+                    </div>
+                    <h3 class="font-card text-power-black" style="margin-bottom: 1rem;">Tecnologia de ponta em lítio e chumbo-ácido</h3>
+                    <p class="text-muted">Soluções avançadas para cada tipo de operação</p>
+                </div>
+            </div>
+
+            <!-- CTA Strip -->
+            <div style="background-color: var(--power-black); padding: 3rem 2rem; border-radius: 1rem; text-align: center;">
+                <div style="max-width: 48rem; margin: 0 auto;">
+                    <a href="#" class="btn btn-primary btn-lg" style="margin-bottom: 1.5rem;">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        Solicite orçamento via WhatsApp
+                    </a>
+                    
+                    <p class="text-power-white" style="font-size: 1.125rem; font-weight: 500;">
+                        Qualidade e prazo de entrega que sua operação precisa é com a Power Trac
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
+            <!-- Logo -->
+            <div style="display: flex; justify-content: center; margin-bottom: 3rem;">
+                <img src="public/lovable-uploads/32f85995-6e29-48d3-b7e2-c3353ab52ec0.png" 
+                     alt="Power Trac Logo" 
+                     style="height: 4rem;">
+            </div>
+            
+            <div class="grid grid-cols-3" style="margin-bottom: 3rem;">
+                <!-- Curitiba -->
+                <div>
+                    <h3 class="font-card text-power-yellow" style="margin-bottom: 1.5rem;">Matriz Curitiba</h3>
+                    
+                    <div style="margin-bottom: 1rem; display: flex; align-items: flex-start; gap: 0.75rem;">
+                        <svg class="icon text-power-yellow" style="margin-top: 0.25rem; flex-shrink: 0;" viewBox="0 0 24 24">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <p style="color: rgba(255, 255, 255, 0.9);">Rua Antonio Schiebel, 124 – 184 – Boqueirão – Curitiba/PR</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem;">
+                        <svg class="icon text-power-yellow" style="flex-shrink: 0;" viewBox="0 0 24 24">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <a href="tel:+5541308239354" style="color: rgba(255, 255, 255, 0.9); text-decoration: none;">+55 (41) 3082-3935</a>
+                    </div>
+                    
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <svg class="icon text-power-yellow" style="flex-shrink: 0;" viewBox="0 0 24 24">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <a href="mailto:powertrac@powertrac.com.br" style="color: rgba(255, 255, 255, 0.9); text-decoration: none;">powertrac@powertrac.com.br</a>
+                    </div>
+                </div>
+
+                <!-- Manaus -->
+                <div>
+                    <h3 class="font-card text-power-yellow" style="margin-bottom: 1.5rem;">Filial Manaus</h3>
+                    
+                    <div style="margin-bottom: 1rem; display: flex; align-items: flex-start; gap: 0.75rem;">
+                        <svg class="icon text-power-yellow" style="margin-top: 0.25rem; flex-shrink: 0;" viewBox="0 0 24 24">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <p style="color: rgba(255, 255, 255, 0.9);">Rua Apurinã, 301 – Centro – Manaus/AM</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem;">
+                        <svg class="icon text-power-yellow" style="flex-shrink: 0;" viewBox="0 0 24 24">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <a href="tel:+5592308521374" style="color: rgba(255, 255, 255, 0.9); text-decoration: none;">+55 (92) 3085-2137</a>
+                    </div>
+                    
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <svg class="icon text-power-yellow" style="flex-shrink: 0;" viewBox="0 0 24 24">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <a href="mailto:powertrac-am@powertrac.com.br" style="color: rgba(255, 255, 255, 0.9); text-decoration: none;">powertrac-am@powertrac.com.br</a>
+                    </div>
+                </div>
+
+                <!-- Florianópolis -->
+                <div>
+                    <h3 class="font-card text-power-yellow" style="margin-bottom: 1.5rem;">Filial Florianópolis</h3>
+                    
+                    <div style="margin-bottom: 1rem; display: flex; align-items: flex-start; gap: 0.75rem;">
+                        <svg class="icon text-power-yellow" style="margin-top: 0.25rem; flex-shrink: 0;" viewBox="0 0 24 24">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <p style="color: rgba(255, 255, 255, 0.9);">Avenida Prefeito Osmar Cunha, 416 – Centro – Florianópolis/SC</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem;">
+                        <svg class="icon text-power-yellow" style="flex-shrink: 0;" viewBox="0 0 24 24">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <a href="tel:+5541308239354" style="color: rgba(255, 255, 255, 0.9); text-decoration: none;">+55 (41) 3082-3935</a>
+                    </div>
+                    
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <svg class="icon text-power-yellow" style="flex-shrink: 0;" viewBox="0 0 24 24">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <a href="mailto:powertrac-sc@powertrac.com.br" style="color: rgba(255, 255, 255, 0.9); text-decoration: none;">powertrac-sc@powertrac.com.br</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="social-links">
+                <a href="https://www.instagram.com/powertracbaterias/" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/powertracbaterias/?locale=pt_BR" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                </a>
+                <a href="https://br.linkedin.com/company/power-trac-baterias" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Bottom section -->
+            <div style="border-top: 1px solid rgba(255, 255, 255, 0.2); padding-top: 2rem; text-align: center;">
+                <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 0.5rem;">
+                    ©2024 Power Trac. Todos os direitos reservados.
+                </p>
+                <p style="color: rgba(255, 255, 255, 0.7);">
+                    Desenvolvido por 
+                    <a href="#" style="color: var(--power-yellow); text-decoration: none; font-weight: 500;">
+                        Fresh Lab Agência de Marketing Digital
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple form handling
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Obrigado! Entraremos em contato em breve.');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
