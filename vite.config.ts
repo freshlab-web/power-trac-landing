@@ -23,9 +23,9 @@ export default defineConfig(({ mode }) => ({
   build: {
     rollupOptions: {
       output: {
-        entryFileNames: `assets/index-C84uXXcI.js`,
+        entryFileNames: `assets/index-C85uXXcI.js`,
         chunkFileNames: `assets/[name]-C84uXXcI.js`,
-        assetFileNames: `assets/[name]-BNSErcrC[extname]`,
+        assetFileNames: `assets/[name]-BNSLrcrC[extname]`,
       },
     },
  },
