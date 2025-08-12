@@ -9,6 +9,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
+  base: "https://cdn.jsdelivr.net/gh/freshlab-web/power-trac-landing@main/dist/",
   plugins: [
     react(),
     mode === 'development' &&
