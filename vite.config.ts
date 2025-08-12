@@ -20,5 +20,13 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  
+  build: {
+    rollupOptions: {
+      output: {
+        entryFileNames: `assets/index-C85uXPcI.js`,
+        chunkFileNames: `assets/[name]-C85uXPcI.js`,
+        assetFileNames: `assets/[name]-BNSLrcrC[extname]`,
+      },
+    },
+ },
 }));
