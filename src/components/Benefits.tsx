@@ -49,7 +49,7 @@ const Benefits = () => {
         {/* CTA Strip */}
         <div className="bg-power-black py-12 px-8 rounded-2xl text-center">
           <div className="max-w-3xl mx-auto">
-            <a href="https://wa.me/554199890345?text=Olá! Gostaria de falar sobre manutenção ou venda de baterias tracionárias." target="_blank">
+            <a id="orcamento-footer" href="https://wa.me/554199890345?text=Olá! Gostaria de falar sobre manutenção ou venda de baterias tracionárias." target="_blank">
             <Button variant="power-primary" size="lg" className="mb-6 shadow-xl">
               <MessageCircle className="w-5 h-5" />
               Solicite orçamento via WhatsApp

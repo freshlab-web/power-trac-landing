@@ -52,7 +52,7 @@ const Models = () => {
                     {model.specs}
                   </p>
                   
-                    <a href={model.link} target="_blank">
+                    <a className="orcamento-modelos" href={model.link} target="_blank">
                   <Button variant="power-primary" className="w-full">
                     Solicitar orçamento
                   </Button>

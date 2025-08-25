@@ -85,13 +85,13 @@ const Hero = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="https://wa.me/554199890345?text=Olá! Gostaria de falar sobre manutenção ou venda de baterias tracionárias." target="_blank">
-              <Button variant="power-hero" className="group">
+              <Button id="atendimento-hero" variant="power-hero" className="group">
                 <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />
                 Atendimento via WhatsApp
               </Button>
               </a>
               <a href="https://www.powertrac.com.br/baterias-tracionarias/" target="_blank">
-              <Button variant="power-outline" size="lg">
+              <Button id="veja-modelos" variant="power-outline" size="lg">
                 
                 <Eye className="w-5 h-5" />
                 Veja os modelos disponíveis
@@ -157,6 +157,7 @@ const Hero = () => {
                 </div>
 
                 <Button
+                  id="submit-hero"
                   variant="power-primary"
                   className="w-full"
                   size="lg"
